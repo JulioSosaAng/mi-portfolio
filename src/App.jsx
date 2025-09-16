@@ -99,7 +99,7 @@ const App = () => {
 
       <footer className="footer">
         <div className="footer-content">
-          <p>Email: tu.email@ejemplo.com</p>
+          <p>Email: julio.sosa.angeles@outlook.com.ar</p>
           <p>LinkedIn: <a href="https://linkedin.com/in/jsangeles" target="_blank" rel="noopener noreferrer">jsangeles</a></p>
           <p>GitHub: <a href="https://github.com/JulioSosaAng" target="_blank" rel="noopener noreferrer">JulioSosaAng</a></p>
         </div>
