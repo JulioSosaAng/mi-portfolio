@@ -69,15 +69,20 @@ const App = () => {
         <div className="progress-bar"></div>
       </div>
       
-      <header className="header">
-        <div className="header-content">
-          <h1 className="header-title animate-on-scroll fade-in-left">Julio Sosa Angeles</h1>
-          <p className="header-subtitle animate-on-scroll fade-in-right">Científico de Datos</p>
-        </div>
+      <header className="header animate-on-scroll fade-in-up">
+        <div className="header-background-animation"></div>   {/* ESTA CAPA ES CLAVE */}
+         <div className="header-content">
+           <h1 className="header-title">Julio Sosa Angeles</h1>
+             <p className="header-subtitle">Científico de Datos</p>
+          </div>
         <div className="scroll-indicator">↓</div>
       </header>
       
       <section className="about-me animate-on-scroll fade-in-up">
+        {/* Iconos de análisis de datos para About Me */}
+        <div className="data-icon data-icon-1"></div>
+        <div className="data-icon data-icon-2"></div>
+        
         <h2 className="section-title">Síntesis y Expectativas</h2>
         <div className="about-content">
           <p>
@@ -87,12 +92,14 @@ const App = () => {
       </section>
 
       <section className="projects-container">
+        {/* Iconos de análisis de datos para Projects */}
+        <div className="data-icon data-icon-1"></div>
+        <div className="data-icon data-icon-2"></div>
+        
         <h2 className="section-title">Proyectos de Ciencia de Datos</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="animate-on-scroll fade-in-up" style={{ animationDelay: `${index * 0.2}s` }}>
-              <Project project={project} />
-            </div>
+            <Project key={index} project={project} className="animate-on-scroll fade-in-up" style={{ animationDelay: `${index * 0.2}s` }} />
           ))}
         </div>
       </section>
