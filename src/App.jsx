@@ -10,12 +10,12 @@ const App = () => {
       link: "https://juliososaang.github.io/analisis_ventas/app.html",
       techs: ["Python", "Pandas", "Matplotlib","Numpy","Panel"]
     },
-    {
-      title: "Clasificación de Especies de Flores",
-      description: "Modelo de machine learning para clasificar especies de flores basado en sus características. Implementado con scikit-learn y Python.",
-      link: "https://github.com/tu-usuario/proyecto-flores",
-      techs: ["Python", "scikit-learn", "Jupyter"]
-    },
+    // {
+    //   title: "Clasificación de Especies de Flores",
+    //   description: "Modelo de machine learning para clasificar especies de flores basado en sus características. Implementado con scikit-learn y Python.",
+    //   link: "https://github.com/tu-usuario/proyecto-flores",
+    //   techs: ["Python", "scikit-learn", "Jupyter"]
+    // },
     // Añade más proyectos aquí
   ];
 
