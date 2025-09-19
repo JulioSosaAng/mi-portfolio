@@ -14,7 +14,7 @@ const Project = ({ project, className, style }) => {
       </div>
 
       <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
-        Ver repositorio
+        Ver Pagina
       </a>
     </article>
   );
