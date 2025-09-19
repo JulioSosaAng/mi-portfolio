@@ -7,8 +7,8 @@ const App = () => {
     {
       title: "Análisis de Datos de Ventas",
       description: "Un análisis detallado de un conjunto de datos de ventas para identificar tendencias, productos más vendidos y estacionalidad. Se usaron Python, Pandas y Matplotlib.",
-      link: "https://github.com/tu-usuario/proyecto-ventas",
-      techs: ["Python", "Pandas", "Matplotlib"]
+      link: "https://juliososaang.github.io/analisis_ventas/app.html",
+      techs: ["Python", "Pandas", "Matplotlib","Numpy","Panel"]
     },
     {
       title: "Clasificación de Especies de Flores",
