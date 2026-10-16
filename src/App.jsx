@@ -11,7 +11,7 @@ const App = () => {
       techs: ["Python", "Pandas", "Matplotlib","Numpy","Panel"]
     },
     {
-      title: "Análisis de Pilotos F1 (2024–2026)",
+      title: "Análisis de Pilotos F1  (2024–2026)",
       description: "Un análisis comparativo de pilotos de F1 para las temporadas 2024 hasta 2026. Permite filtrar por temporada y piloto, e incluye KPIs y gráficos interactivos sobre victorias, poles, vueltas rápidas y conversión Pole→Victoria. Construido con Streamlit y Plotly para exploración dinámica de datos.",
       link: "https://f1-pilotos-2024-2025.streamlit.app/",
       techs: ["Python", "Streamlit", "Pandas", "Plotly"]
