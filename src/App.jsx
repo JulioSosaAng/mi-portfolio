@@ -105,7 +105,7 @@ const App = () => {
         <h2 className="section-title">Proyectos de Ciencia de Datos</h2>
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <Project key={index} project={project} className="animate-on-scroll fade-in-up" style={{ animationDelay: `${index * 0.2}s` }} />
+            <Project key={index} project={project} className="animate-on-scroll fade-in-up" style={{ transitionDelay: `${index * 0.2}s` }} />
           ))}
         </div>
       </section>
