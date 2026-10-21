@@ -145,8 +145,8 @@ h1 {
   padding: 4rem 1.5rem;
   position: relative;
   overflow: hidden;
-  height: 100svh;      /* altura visible real en móviles modernos */
   min-height: 100vh;   /* fallback para navegadores antiguos */
+  min-height: 100svh;  /* altura visible real en móviles modernos */
   display: flex;
   align-items: center;
   justify-content: center;
