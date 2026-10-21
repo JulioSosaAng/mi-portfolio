@@ -583,12 +583,12 @@ h1 {
     display: none;
   }
 }
-/* Media query para dispositivos con pantalla de ancho máximo de 768px */
+
+/* En pantallas chicas, desactivar la animación de partículas del header */
 @media (max-width: 768px) {
-  /* Desactiva la animación del fondo para pantallas pequeñas */
-  .header::before {
+  .header-background-animation::before {
     animation: none;
-    background-position: center; /* Asegura que el fondo esté centrado */
-    background-size: cover; /* Asegura que el fondo cubra el espacio sin movimiento */
+    background-position: center;
+    background-size: cover;
   }
 }
