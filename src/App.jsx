@@ -16,6 +16,12 @@ const App = () => {
       link: "https://f1-pilotos-2024-2025.streamlit.app/",
       techs: ["Python", "Streamlit", "Pandas", "Plotly"]
     },
+        {
+      title: "The Last Mile Gap | Data Analytics",
+      description: "Análisis end-to-end del impacto de retrasos logísticos en la satisfacción del cliente (Olist). Incluye pipeline ETL, base de datos en la nube y dashboard interactivo.",
+      link: "https://the-last-mile-gap-olist.streamlit.app/",
+      techs: ["Python", "SQL", "PostgreSQL", "Pandas", "Streamlit", "Plotly", "SQLAlchemy", "Git", "GitHub"]
+    }
     // Añade más proyectos aquí
   ];
 
