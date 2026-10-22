@@ -96,7 +96,7 @@ const App = () => {
                <span className="btn-arrow">→</span>
              </a>
              <a
-               href="/cv-julio-sosa-angeles.pdf"
+               href="cv-julio-sosa-angeles.pdf"
                className="btn btn-outline"
                target="_blank"
                rel="noopener noreferrer"
