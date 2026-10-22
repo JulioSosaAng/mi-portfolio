@@ -13,9 +13,17 @@ const Project = ({ project, className, style }) => {
         ))}
       </div>
 
-      <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
-        Ver Pagina
-      </a>
+      <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+        <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
+          {project.linkLabel || "Ver proyecto"}
+        </a>
+        
+        {project.repoLink && (
+          <a className="project-link" href={project.repoLink} target="_blank" rel="noopener noreferrer">
+            Repositorio
+          </a>
+        )}
+      </div>
     </article>
   );
 };

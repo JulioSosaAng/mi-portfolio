@@ -3,26 +3,29 @@ import Project from './Project';
 import './index.css';
 
 const App = () => {
-  const projects = [
+    const projects = [
     {
       title: "Análisis de Datos de Ventas",
       description: "Un análisis detallado de un conjunto de datos de ventas para identificar tendencias, productos más vendidos y estacionalidad. Se usaron Python, Pandas, Matplotlib y Panel. Este último para los gráficos.",
       link: "https://juliososaang.github.io/analisis_ventas/app.html",
-      techs: ["Python", "Pandas", "Matplotlib","Numpy","Panel"]
+      linkLabel: "Ver proyecto",
+      techs: ["Python", "Pandas", "Matplotlib", "Numpy", "Panel"]
     },
     {
-      title: "Análisis de Pilotos F1  (2024–2026)",
+      title: "Análisis de Pilotos F1 (2024–2026)",
       description: "Un análisis comparativo de pilotos de F1 para las temporadas 2024 hasta 2026. Permite filtrar por temporada y piloto, e incluye KPIs y gráficos interactivos sobre victorias, poles, vueltas rápidas y conversión Pole→Victoria. Construido con Streamlit y Plotly para exploración dinámica de datos.",
       link: "https://f1-pilotos-2024-2025.streamlit.app/",
+      linkLabel: "Ver app interactiva",
       techs: ["Python", "Streamlit", "Pandas", "Plotly"]
     },
-        {
-      title: "The Last Mile Gap | Data Analytics",
-      description: "Análisis end-to-end del impacto de retrasos logísticos en la satisfacción del cliente (Olist). Incluye pipeline ETL, base de datos en la nube y dashboard interactivo.",
+    {
+      title: "The Last Mile Gap — Análisis de Datos",
+      description: "Análisis end-to-end del impacto de retrasos logísticos en la satisfacción del cliente (Olist). Incluye un pipeline ETL automatizado, base de datos en la nube (PostgreSQL) y un dashboard interactivo para explorar la eficiencia operativa y las métricas de entrega.",
       link: "https://the-last-mile-gap-olist.streamlit.app/",
-      techs: ["Python", "SQL", "PostgreSQL", "Pandas", "Streamlit", "Plotly", "SQLAlchemy", "Git", "GitHub"]
+      linkLabel: "Ver dashboard",
+      repoLink: "https://github.com/JulioSosaAng/the-last-mile-gap-olist",
+      techs: ["Python", "SQL", "PostgreSQL", "Pandas", "Streamlit", "Plotly", "SQLAlchemy", "Git"]
     }
-    // Añade más proyectos aquí
   ];
 
   useEffect(() => {
@@ -79,7 +82,7 @@ const App = () => {
         <div className="header-background-animation"></div>   {/* ESTA CAPA ES CLAVE */}
          <div className="header-content">
            <h1 className="header-title">Julio Sosa Angeles</h1>
-             <p className="header-subtitle">Analista De Datos</p>
+             <p className="header-subtitle">Analista de Datos</p>
           </div>
         <div className="scroll-indicator">↓</div>
       </header>
@@ -92,7 +95,7 @@ const App = () => {
         <h2 className="section-title">Síntesis y Expectativas</h2>
         <div className="about-content">
           <p>
-            Desarrollador y analista de datos con experiencia en transformar información bruta en conocimiento accionable. Dando mis primeros pasos en machine learning, la visualización de datos y el análisis predictivo. Mi objetivo es especializarme en la aplicación de modelos de IA para resolver problemas complejos de negocio.
+            Analista de datos con experiencia en transformar información bruta en conocimiento accionable. Dando mis primeros pasos en machine learning, la visualización de datos y el análisis predictivo. Mi objetivo es especializarme en la aplicación de modelos de IA para resolver problemas complejos de negocio.
           </p>
         </div>
       </section>
