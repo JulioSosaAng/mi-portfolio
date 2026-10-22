@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Project from './Project';
 import Navbar from './Navbar';
+import Skills from './Skills';
 import './index.css';
 
 const App = () => {
@@ -102,6 +103,8 @@ const App = () => {
           </p>
         </div>
       </section>
+
+      <Skills />
 
       <section id="proyectos" className="projects-container">
         {/* Iconos de análisis de datos para Projects */}
