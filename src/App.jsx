@@ -86,7 +86,25 @@ const App = () => {
         <div className="header-background-animation"></div>   {/* ESTA CAPA ES CLAVE */}
          <div className="header-content">
            <h1 className="header-title">Julio Sosa Angeles</h1>
-             <p className="header-subtitle">Analista de Datos</p>
+           <p className="header-subtitle">Analista de Datos</p>
+           <p className="header-tagline">
+             Transformo datos en decisiones · Python · SQL · Machine Learning
+           </p>
+           <div className="header-cta">
+             <a href="#proyectos" className="btn btn-primary">
+               Ver proyectos
+               <span className="btn-arrow">→</span>
+             </a>
+             <a
+               href="/cv-julio-sosa-angeles.pdf"
+               className="btn btn-outline"
+               target="_blank"
+               rel="noopener noreferrer"
+             >
+               Descargar CV
+               <span className="btn-icon">↓</span>
+             </a>
+           </div>
           </div>
         <div className="scroll-indicator">↓</div>
       </header>
