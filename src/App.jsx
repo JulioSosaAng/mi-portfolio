@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Project from './Project';
+import Navbar from './Navbar';
 import './index.css';
 
 const App = () => {
@@ -77,8 +78,10 @@ const App = () => {
       <div className="progress-container">
         <div className="progress-bar"></div>
       </div>
+
+      <Navbar />
       
-      <header className="header animate-on-scroll fade-in-up">
+      <header id="inicio" className="header animate-on-scroll fade-in-up">
         <div className="header-background-animation"></div>   {/* ESTA CAPA ES CLAVE */}
          <div className="header-content">
            <h1 className="header-title">Julio Sosa Angeles</h1>
@@ -87,7 +90,7 @@ const App = () => {
         <div className="scroll-indicator">↓</div>
       </header>
       
-      <section className="about-me animate-on-scroll fade-in-up">
+      <section id="sobre-mi" className="about-me animate-on-scroll fade-in-up">
         {/* Iconos de análisis de datos para About Me */}
         <div className="data-icon data-icon-1"></div>
         <div className="data-icon data-icon-2"></div>
@@ -100,7 +103,7 @@ const App = () => {
         </div>
       </section>
 
-      <section className="projects-container">
+      <section id="proyectos" className="projects-container">
         {/* Iconos de análisis de datos para Projects */}
         <div className="data-icon data-icon-1"></div>
         <div className="data-icon data-icon-2"></div>
@@ -113,7 +116,7 @@ const App = () => {
         </div>
       </section>
 
-      <footer className="footer">
+      <footer id="contacto" className="footer">
         <div className="footer-content">
           <p>Email: julio.sosa.angeles@outlook.com.ar</p>
           <p>LinkedIn: <a href="https://linkedin.com/in/jsangeles" target="_blank" rel="noopener noreferrer">jsangeles</a></p>
