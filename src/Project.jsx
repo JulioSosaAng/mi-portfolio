@@ -36,6 +36,7 @@ const Project = ({ project, className, style }) => {
         <div className="project-carousel">
           <div className="carousel-image-wrapper">
             <img
+              key={currentImageIndex}
               src={getImageUrl(images[currentImageIndex])}
               alt={`${project.title} - Captura ${currentImageIndex + 1}`}
               className="carousel-image"
