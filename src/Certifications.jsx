@@ -3,6 +3,16 @@ import './index.css';
 
 const certificationsData = [
   {
+    title: 'Certificado Intermedio de Data Science',
+    issuer: 'Teclab Instituto Técnico Superior',
+    date: 'Res. 2023-3691-GCABA-MEDGC',
+    link: 'certificates/certificado-data-science-teclab.pdf',
+    linkLabel: 'Ver diploma (PDF)',
+    platform: 'Título Oficial',
+    tags: ['Ciencia de Datos', 'Tecnicatura Superior', 'Python & Analytics', 'Validez Nacional GCABA'],
+    iconType: 'teclab',
+  },
+  {
     title: 'Microsoft Certified: Power Platform Fundamentals',
     issuer: 'Microsoft',
     credentialId: 'PL-900',
@@ -51,6 +61,19 @@ const certificationsData = [
 ];
 
 const IssuerIcon = ({ type }) => {
+  if (type === 'teclab') {
+    return (
+      <div
+        className="cert-badge-pill"
+        title="Teclab Instituto Técnico Superior"
+        style={{ background: 'linear-gradient(135deg, #0050ff, #00bcd4)' }}
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff" aria-hidden="true">
+          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z" />
+        </svg>
+      </div>
+    );
+  }
   if (type === 'microsoft') {
     return (
       <svg className="cert-issuer-icon" viewBox="0 0 23 23" width="28" height="28" aria-hidden="true">
@@ -86,6 +109,16 @@ const IssuerIcon = ({ type }) => {
 };
 
 const Certifications = () => {
+  const getCertUrl = (link) => {
+    if (!link) return '#';
+    if (link.startsWith('http://') || link.startsWith('https://')) {
+      return link;
+    }
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const cleanPath = link.startsWith('/') ? link.slice(1) : link;
+    return `${baseUrl}${cleanPath}`;
+  };
+
   return (
     <section id="certificaciones" className="certifications-section animate-on-scroll fade-in-up">
       <div className="data-icon data-icon-1"></div>
@@ -120,12 +153,12 @@ const Certifications = () => {
               </div>
 
               <a
-                href={cert.link}
+                href={getCertUrl(cert.link)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cert-link"
               >
-                <span>Verificar credencial</span>
+                <span>{cert.linkLabel || 'Verificar credencial'}</span>
                 <span className="cert-link-arrow">↗</span>
               </a>
             </article>
