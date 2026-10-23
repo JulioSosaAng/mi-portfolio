@@ -11,14 +11,24 @@ const App = () => {
       description: "Un análisis detallado de un conjunto de datos de ventas para identificar tendencias, productos más vendidos y estacionalidad. Se usaron Python, Pandas, Matplotlib y Panel. Este último para los gráficos.",
       link: "https://juliososaang.github.io/analisis_ventas/app.html",
       linkLabel: "Ver proyecto",
-      techs: ["Python", "Pandas", "Matplotlib", "Numpy", "Panel"]
+      techs: ["Python", "Pandas", "Matplotlib", "Numpy", "Panel"],
+      images: [
+        "projects/ventas/ventas_01.png",
+        "projects/ventas/ventas_02.png",
+        "projects/ventas/ventas_03.png"
+      ]
     },
     {
       title: "Análisis de Pilotos F1 (2024–2026)",
       description: "Un análisis comparativo de pilotos de F1 para las temporadas 2024 hasta 2026. Permite filtrar por temporada y piloto, e incluye KPIs y gráficos interactivos sobre victorias, poles, vueltas rápidas y conversión Pole→Victoria. Construido con Streamlit y Plotly para exploración dinámica de datos.",
       link: "https://f1-pilotos-2024-2025.streamlit.app/",
       linkLabel: "Ver app interactiva",
-      techs: ["Python", "Streamlit", "Pandas", "Plotly"]
+      techs: ["Python", "Streamlit", "Pandas", "Plotly"],
+      images: [
+        "projects/f1/f1_01.png",
+        "projects/f1/f1_02.png",
+        "projects/f1/f1_03.png"
+      ]
     },
     {
       title: "The Last Mile Gap — Análisis de Datos",
@@ -26,7 +36,12 @@ const App = () => {
       link: "https://the-last-mile-gap-olist.streamlit.app/",
       linkLabel: "Ver dashboard",
       repoLink: "https://github.com/JulioSosaAng/the-last-mile-gap-olist",
-      techs: ["Python", "SQL", "PostgreSQL", "Pandas", "Streamlit", "Plotly", "SQLAlchemy", "Git"]
+      techs: ["Python", "SQL", "PostgreSQL", "Pandas", "Streamlit", "Plotly", "SQLAlchemy", "Git"],
+      images: [
+        "projects/last-mile/olist_01.png",
+        "projects/last-mile/olist_02.png",
+        "projects/last-mile/olist_03.png"
+      ]
     }
   ];
 
