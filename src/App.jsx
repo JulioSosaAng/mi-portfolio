@@ -3,6 +3,7 @@ import Project from './Project';
 import Navbar from './Navbar';
 import Skills from './Skills';
 import Certifications from './Certifications';
+import DataNetworkCanvas from './DataNetworkCanvas';
 import './index.css';
 
 const App = () => {
@@ -92,6 +93,7 @@ const App = () => {
 
   return (
     <div>
+      <DataNetworkCanvas />
       <div className="progress-container">
         <div className="progress-bar"></div>
       </div>

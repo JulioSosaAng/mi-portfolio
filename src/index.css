@@ -8,8 +8,8 @@
   --dark: #e0e0e0; /* Gris claro */
   --gray: #bdbdbd; /* Gris medio */
   --success: #66bb6a; /* Verde */
-  --card-bg: #212121; /* Gris oscuro para las tarjetas */
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --card-bg: rgba(18, 25, 30, 0.82); /* Fondo translúcido de tarjetas con efecto glassmorphism */
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --transition: all 0.3s ease;
   --border-radius: 8px;
@@ -23,10 +23,12 @@
 body {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background-color: var(--light);
+  background: radial-gradient(circle at 50% 15%, #081d24 0%, #06151a 50%, #040c10 100%);
+  background-attachment: fixed;
   color: var(--dark);
   line-height: 1.6;
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -141,7 +143,7 @@ h1 {
 
 /* Estilos específicos del header */
 .header {
-  background: var(--light);
+  background: transparent;
   color: var(--dark);
   padding: 4rem 1.5rem;
   position: relative;
@@ -152,6 +154,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  z-index: 1;
 }
 
 .header-background-animation {
@@ -160,28 +163,9 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--light), #0a0a0a);
+  background: radial-gradient(circle at center, transparent 30%, rgba(4, 12, 16, 0.5) 100%);
   z-index: -1;
-}
-
-.header-background-animation::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(circle, rgba(0, 187, 212, 0.563) 1px, transparent 2px),
-    radial-gradient(circle, rgba(0, 187, 212, 0.348) 1px, transparent 1px);
-  background-size: 50px 50px, 30px 30px;
-  background-position: 0 0, 25px 25px;
-  animation: particleMove 20s linear infinite;
-}
-
-@keyframes particleMove {
-  0% { background-position: 0 0, 25px 25px; }
-  100% { background-position: 50px 50px, 75px 75px; }
+  pointer-events: none;
 }
 
 .header-content {
@@ -339,47 +323,18 @@ h1 {
   z-index: 1;
 }
 
-/* Íconos dinámicos en las secciones About Me y Projects */
+/* Íconos estáticos anteriores desactivados en favor del canvas dinámico */
 .data-icon {
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.about-me.animate .data-icon,
-.projects-container.animate .data-icon {
-  opacity: 0.1;
-  animation: fadeInScale 2s forwards;
-}
-
-/* Iconos de About Me */
-.about-me .data-icon-1 {
-  top: 25%;
-  right: 10%;
-  width: 100px;
-  height: 100px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300bcd4' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-activity'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E");
-  animation-delay: 0.4s;
-}
-
-.about-me .data-icon-2 {
-  bottom: 25%;
-  left: 10%;
-  width: 120px;
-  height: 120px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2329b6f6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-bar-chart-2'%3E%3Cline x1='18' y1='20' x2='18' y2='10'/%3E%3Cline x1='12' y1='20' x2='12' y2='4'/%3E%3Cline x1='6' y1='20' x2='6' y2='14'/%3E%3C/svg%3E");
-  animation-delay: 0.6s;
+  display: none;
 }
 
 /* Estilos de la sección de proyectos */
 .projects-container {
-  background-color: #1a1a1a;
+  background-color: transparent;
   padding: 6rem 1.5rem;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 /* Íconos de Projects */
@@ -434,12 +389,14 @@ h1 {
 
 .project-card {
   background-color: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
   padding: 1.8rem;
   box-shadow: var(--shadow);
   text-align: left;
   transition: var(--transition);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 188, 212, 0.12);
   border-top: 3px solid var(--primary);
   display: flex;
   flex-direction: column;
@@ -652,10 +609,14 @@ h1 {
 
 /* Estilos del footer */
 .footer {
-  background-color: #0a0a0a;
+  background-color: rgba(4, 12, 16, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #fff;
   padding: 4rem 1.5rem 2.5rem;
-  border-top: 1px solid rgba(0, 188, 212, 0.1);
+  border-top: 1px solid rgba(0, 188, 212, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .footer-content {
@@ -994,11 +955,15 @@ h1 {
 
 /* ===================== SKILLS ===================== */
 .skills-section {
-  background-color: var(--light);
+  background-color: rgba(6, 18, 22, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 6rem 1.5rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 188, 212, 0.1);
+  border-bottom: 1px solid rgba(0, 188, 212, 0.08);
   position: relative;
+  z-index: 1;
 }
 
 .skills-categories {
@@ -1045,7 +1010,9 @@ h1 {
   justify-content: center;
   gap: 0.6rem;
   background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 188, 212, 0.12);
   border-radius: 12px;
   padding: 1.2rem 1rem;
   width: 100px;
@@ -1118,12 +1085,15 @@ h1 {
 
 /* ===================== CERTIFICACIONES ===================== */
 .certifications-section {
-  background-color: var(--light);
+  background-color: rgba(6, 18, 22, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 6rem 1.5rem;
   text-align: center;
-  border-top: 1px solid rgba(0, 188, 212, 0.15);
+  border-top: 1px solid rgba(0, 188, 212, 0.12);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .certifications-content {
@@ -1151,11 +1121,13 @@ h1 {
 
 .certification-card {
   background-color: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--border-radius);
   padding: 1.8rem;
   box-shadow: var(--shadow);
   transition: var(--transition);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 188, 212, 0.12);
   border-top: 3px solid var(--primary);
   display: flex;
   flex-direction: column;
