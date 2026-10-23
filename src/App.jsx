@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Project from './Project';
 import Navbar from './Navbar';
 import Skills from './Skills';
+import Certifications from './Certifications';
 import './index.css';
 
 const App = () => {
@@ -151,6 +152,8 @@ const App = () => {
           ))}
         </div>
       </section>
+
+      <Certifications />
 
       <footer id="contacto" className="footer">
         <div className="footer-content">

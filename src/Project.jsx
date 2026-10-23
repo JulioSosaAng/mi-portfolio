@@ -91,14 +91,16 @@ const Project = ({ project, className, style }) => {
         ))}
       </div>
 
-      <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+      <div className="project-links">
         <a className="project-link" href={project.link} target="_blank" rel="noopener noreferrer">
-          {project.linkLabel || "Ver proyecto"}
+          <span>{project.linkLabel || "Ver proyecto"}</span>
+          <span className="project-link-arrow">↗</span>
         </a>
         
         {project.repoLink && (
-          <a className="project-link" href={project.repoLink} target="_blank" rel="noopener noreferrer">
-            Repositorio
+          <a className="project-link project-link-secondary" href={project.repoLink} target="_blank" rel="noopener noreferrer">
+            <span>Repositorio</span>
+            <span className="project-link-arrow">↗</span>
           </a>
         )}
       </div>
