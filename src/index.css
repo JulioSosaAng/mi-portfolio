@@ -958,7 +958,7 @@ h1 {
   background-color: rgba(6, 18, 22, 0.55);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  padding: 4.5rem 0;
+  padding: 3.5rem 0 2.2rem;
   text-align: center;
   border-top: 1px solid rgba(0, 188, 212, 0.1);
   border-bottom: 1px solid rgba(0, 188, 212, 0.08);
@@ -971,7 +971,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 0.9rem 0; /* Margen interno para que el resplandor y elevación del hover no se corten arriba */
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -1060,6 +1061,10 @@ h1 {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
+.skill-chip-icon img[alt="GitHub"] {
+  filter: invert(1) brightness(1.2) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
 .skill-custom-icon {
   width: 26px;
   height: 26px;
@@ -1081,12 +1086,13 @@ h1 {
 
 @media (max-width: 768px) {
   .skills-section {
-    padding: 3.5rem 0;
+    padding: 3rem 0 2rem;
   }
 
   .skills-marquee-wrapper {
     gap: 0.9rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem 0;
   }
 
   .skill-chip {
