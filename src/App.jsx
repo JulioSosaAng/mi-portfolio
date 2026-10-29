@@ -124,7 +124,6 @@ const App = () => {
              </a>
            </div>
           </div>
-        <div className="scroll-indicator">↓</div>
       </header>
       
       {/* CÓDIGO NUEVO */}
